@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Use is governed by the University of Pittsburgh Academic Use EULA (LICENSE.md); publications using these materials must cite the reference below (EULA sec. 4)."
+title: "ERG-Wavelet-OP: energy-calibrated wavelet and STFT analysis of ERG oscillatory potentials"
+authors:
+  - family-names: Rosin
+    given-names: Boris
+    affiliation: "University of Pittsburgh"
+version: 1.0.0
+date-released: 2026-09-01
+license-url: "LICENSE.txt"  # University of Pittsburgh Academic Use EULA
+doi: 10.5281/zenodo.XXXXXXX   # <- replace with the Zenodo DOI after first release
+preferred-citation:
+  type: article
+  title: "Wavelet versus short-time Fourier transform analysis of ERG oscillatory potentials"  # <- final title
+  authors:
+    - family-names: Rosin
+      given-names: Boris
+  journal: "Translational Vision Science & Technology"
+  year: 2026

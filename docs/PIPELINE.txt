@@ -1,0 +1,16 @@
+# Pipeline overview
+
+Raw ERG -> zero-phase sharp IIR notch (line frequency, Q = 35) -> zero-phase
+4th-order Butterworth high-pass (60 Hz) -> parallel analysis:
+
+* CWT path: real Morlet ('morl'), 512 log-spaced scales from
+  `getWaveletScales(fs)`; energy-calibrated PSD = K * time-mean |W|^2 with K
+  from Parseval calibration (`CalibrateWaveletPSD`, cached per grid by
+  `getWaveletPSDConstant`); outputs peak PSD (PPSD) and dominant frequency.
+* STFT path: spectrogram (60 Hz resolution display) + Welch PSD; PPSD and
+  dominant frequency on the zero-padded grid.
+
+Validation: synthetic OP-like Gabor bursts embedded in AR(8) surrogates of
+each cohort's own pre-stimulus noise, amplitude-matched to the cohort's
+filtered OP amplitude (Family A: single bursts 80-115 Hz; Family B: paired
+bursts 15 ms apart; SNR sweep at fixed 1000 Hz).
