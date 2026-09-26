@@ -1,13 +1,13 @@
 # ERG-Wavelet-OP
-
+ 
 Energy-calibrated continuous wavelet transform (CWT, real Morlet) and
 short-time Fourier transform (STFT) analysis of electroretinogram (ERG)
 oscillatory potentials (OPs), with a ground-truth synthetic validation
 framework. Companion code for Rosin et al. (2026), *TVST* (citation in
 `CITATION.cff`).
-
+ 
 **License: University of Pittsburgh Academic Use EULA (`LICENSE.txt` / `Academic_Use_EULA.docx`). Non-commercial, educational and research use only; no redistribution or derivative works; publications using these materials must cite the reference in `CITATION.cff` (EULA §4). Commercial licensing: University of Pittsburgh Innovation Institute. Not a medical device; not for clinical decision-making.**
-
+ 
 ## Contents
 - `pipeline/` — MATLAB analysis
   - `CreateCWTFigure6.m` — wavelet composite + energy-calibrated wavelet PSD
@@ -33,11 +33,11 @@ framework. Companion code for Rosin et al. (2026), *TVST* (citation in
     regenerated without access to any recorded data:
     `GenerateSyntheticValidation('SyntheticNoiseParameters.mat', out)`
 - `docs/` — pipeline overview and usage
-
+ 
 ## Requirements
 MATLAB R2026a (Signal Processing Toolbox, Wavelet Toolbox). The package is
 MATLAB only, including the synthetic-signal generators.
-
+ 
 ## Quick start
 1. After cloning, add the package to the MATLAB path:
    `addpath(genpath('erg-wavelet-op'))` (or the folder you cloned into).
@@ -49,7 +49,7 @@ MATLAB only, including the synthetic-signal generators.
    vectors.
 5. To reproduce the validation: run `GenerateSyntheticValidation`, then
    process the generated folders with the same batch driver.
-
+ 
 ## Data availability
 No patient or animal recordings are distributed with this repository.
 The synthetic validation dataset can be regenerated exactly from the
